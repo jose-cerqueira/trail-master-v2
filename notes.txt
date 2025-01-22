@@ -1,0 +1,2 @@
+Function URL: https://us-central1-trail-master-447216.cloudfunctions.net/ingest-trails
+ChatGPT Pipeline: https://chatgpt.com/share/678fd070-7240-8002-8a8f-0a2cac0196f0
