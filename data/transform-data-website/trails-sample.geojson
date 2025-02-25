@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [13.4050, 52.5200], 
+          [13.3847, 52.5308], 
+          [13.3777, 52.5163]
+        ]
+      },
+      "properties": {
+        "name": "Berlin Path"
+      }
+    },
+    {
+        "type": "Feature", 
+        "geometry": {
+            "type": "LineString",
+            "coordinates": [
+                [13.4256064, 52.5297772],
+                [13.4257282, 52.5298626],
+                [13.42748, 52.5314058],
+                [13.4281894, 52.5320373]
+            ]
+        }
+    }
+  ]
+}

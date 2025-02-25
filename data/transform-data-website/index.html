@@ -1,0 +1,30 @@
+<div id="map" style="height: 500px;"></div>
+
+<!-- Leaflet.js CSS and JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    // Initialize the map with a center point and zoom level
+    var map = L.map('map').setView([52.530208, 13.423987], 12);  // Adjust to your preferred coordinates
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Load and add GeoJSON data
+    fetch('trails.geojson')  // Ensure the correct path to your GeoJSON file
+        .then(response => response.json())
+        .then(data => {
+            L.geoJSON(data, {
+                style: function (feature) {
+                    return {
+                        color: '#39FF14',  // Neon green color (Hex code)
+                        weight: 4          // Line thickness
+                    };
+                }
+                }).addTo(map);
+        })
+        .catch(error => console.error('Error loading GeoJSON:', error));
+</script>
